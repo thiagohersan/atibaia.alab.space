@@ -29,9 +29,10 @@ git push origin master
 git checkout --orphan gh-pages
 mv FATA2016-Site/public/2016 .
 mv FATA2017-Site/_site/2017 .
+echo "atibaia.alab.space" > CNAME
 
 git rm --cached -r .
-git add 2016/ 2017/
+git add 2016/ 2017/ CNAME
 git commit -m "update sites"
 git push origin :gh-pages
 git push -u origin gh-pages
