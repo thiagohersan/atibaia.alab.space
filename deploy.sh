@@ -30,9 +30,11 @@ git checkout --orphan gh-pages
 mv FATA2016-Site/public/2016 .
 mv FATA2017-Site/_site/2017 .
 
-git rm --cached -r FATA2016-Site FATA2017-Site .gitmodules
+git rm --cached -r .
 git add 2016/ 2017/
 git commit -m "update sites"
+git push origin :gh-pages
 git push -u origin gh-pages
 
 git checkout -f master
+git branch -D gh-pages
