@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Title</title>
+    <title>Festival de Arte e Tecnologia de Atibaia</title>
     <script>
+      setTimeout(function() {
+        window.location.href = "2016/";
+      }, 10e3);
+
       function lerpValue(y0, y1, pos) {
         return (y0 + pos * (y1 - y0));
       }
@@ -14,18 +18,37 @@
         var red = lerpValue((c0 >> 16 & 0xff), (c1 >> 16 & 0xff), pos) & 0xff;
         var green = lerpValue((c0 >> 8 & 0xff), (c1 >> 8 & 0xff), pos) & 0xff;
         var blue = lerpValue((c0 >> 0 & 0xff), (c1 >> 0 & 0xff), pos) & 0xff;
-
         return ""+red.toString(16)+green.toString(16)+blue.toString(16);
       }
 
       document.addEventListener("mousemove", function(event) {
         var mouseXpct = event.pageX / window.innerWidth;
         var bgColor = "#"+trendLerp(mouseXpct);
-
+        var txtColor = "#"+trendLerp(1.0-mouseXpct);
         document.getElementsByTagName('body')[0].style.backgroundColor = bgColor;
+        document.getElementsByTagName('a')[0].style.color = txtColor;
       });
     </script>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        background-color: #9a76cb;
+        line-height: 100vh;
+        vertical-align: middle;
+        text-align: center;
+      }
+      a {
+        text-transform: uppercase;
+        font-family: sans-serif;
+        font-size: 4vw;
+        color: #9a76cb;
+      }
+    </style>
   </head>
   <body>
+    <a href="2016/">Festival de Arte e Tecnologia de Atibaia</a>
   </body>
 </html>
