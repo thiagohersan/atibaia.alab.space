@@ -28,6 +28,7 @@ popd
 git add FATA2016-Site FATA2017-Site
 git commit -m "move submodule to latest commit in master"
 git push origin master
+git checkout -- .
 
 git checkout --orphan gh-pages
 mv FATA2016-Site/public/2016 .
