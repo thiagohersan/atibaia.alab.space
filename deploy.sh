@@ -35,7 +35,8 @@ mv FATA2016-Site/public/2016 .
 mv FATA2017-Site/_site/2017 .
 
 git rm --cached -r .
-git add 2016/ 2017/ CNAME index.html
+git add CNAME index.html
+git add 2016 2017
 git commit -m "update sites"
 git push origin :gh-pages
 git push -u origin gh-pages
