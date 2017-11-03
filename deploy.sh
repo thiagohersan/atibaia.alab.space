@@ -1,5 +1,8 @@
 #!/bin/bash
 
+git submodule init
+git submodule update
+
 ## 2016
 pushd FATA2016-Site
 git pull origin master
