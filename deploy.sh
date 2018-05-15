@@ -35,7 +35,7 @@ mv FATA2016-Site/public/2016 .
 mv FATA2017-Site/_site/2017 .
 
 git rm --cached -r .
-git add CNAME index.html
+git add CNAME index.html js
 git add 2016
 git add 2017
 git commit -m "updates sites"
